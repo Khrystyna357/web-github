@@ -10,6 +10,12 @@ const currentYear = new Date().getFullYear();
 
 const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
 
+setInterval(updateClock, 1000);
+function updateClock() {
+    const clockContainer = document.querySelector('.clock');
+    clockContainer.innerText = (new Date()).toLocaleTimeString();
+}
+
 // Set background year
 year.innerText = currentYear + 1;
 
